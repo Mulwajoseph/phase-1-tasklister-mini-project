@@ -7,7 +7,7 @@ html {
 body {
   min-height: 100%;
   min-width: 100%;
-  background: linear-gradient(pink, violet);
+  background: linear-gradient(rgb(16, 9, 214), rgb(137, 130, 238));
 }
 
 button {
@@ -26,12 +26,74 @@ button {
   border-radius: 5px;
   box-shadow: 2px 5px 5px #333;
 }
+#create-task-form{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+#create-task-form label,
+#create-task-form input,
+#create-task-form select {
+  margin-bottom: 5px;
+}
+
+#task-priority {
+  flex: 1;
+}
+
 
 #list {
   margin: 10px;
   border: 1px solid #333;
-  background: rgba(255, 255, 255, 0.75);
+  background: rgba(7, 8, 97, 0.75);
   padding: 15px 20px 18px 18px;
   border-radius: 5px;
   box-shadow: 2px 5px 5px #333;
 }
+/* style for my color list */
+#list li {
+  margin-bottom: 10px;
+}
+#sort-buttons{
+  display: flex;
+  flex-direction: column;/*Stacks the buttons vertically*/
+  align-items: center; /*Center buttons Horizontally*/
+  margin-bottom: 10px; /* Adds spacin between the button and form*/
+}
+#sort-ascending,
+#sort-descending{
+  margin: 5px 0; /*Add a spacing of 5px around the button */
+}
+/* Style the "Delete" button */
+.delete-button {
+  margin-left: 10px; /* Add left margin for spacing */
+}
+/* Define color classes */
+.high-priority {
+  background-color: red;
+  color: white; /* Set text color for visibility */
+}
+.medium-priority {
+  background-color: yellow;
+  color: black;
+}
+.low-priority {
+  background-color: green;
+  color: white; /* Set text color for visibility */
+}
+.low-minute {
+  background-color: white;
+  color: black; /* Set text color for visibility */
+}
+
+/* Style select element to remove default dropdown arrow */
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  padding: 5px;
+  border: 1px solid #ccc;
+  width: 150px;
+  font-size: 14px;
+}
+
